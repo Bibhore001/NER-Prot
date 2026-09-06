@@ -1,25 +1,52 @@
 {
   "expo": {
     "name": "NIRVANA",
-    "slug": "NIRVANA",
+    "slug": "nirvana-logistics",
+    "description": "Northeast Intelligent Routing & Vehicle Accessibility Network Assistant",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0b1329"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "in.gov.nirvana.accessibility",
+      "infoPlist": {
+        "UIBackgroundModes": ["fetch", "remote-notification"],
+        "NSCameraUsageDescription": "NIRVANA uses the camera to report real-time road conditions, landslides, and blockages.",
+        "NSLocationWhenInUseUsageDescription": "NIRVANA uses your location to geo-tag road incident reports in Northeast India.",
+        "NSPhotoLibraryUsageDescription": "NIRVANA needs photo library access to upload road status evidence."
+      }
     },
     "android": {
+      "package": "in.gov.nirvana.accessibility",
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "POST_NOTIFICATIONS",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ],
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
+        "backgroundColor": "#0b1329"
+      }
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#10b981"
+        }
+      ]
+    ]
   }
 }

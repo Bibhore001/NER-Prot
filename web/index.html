@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <title>NIRVANA - Live Road Accessibility Map</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS for OpenStreetMap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <style id="expo-reset">
+      * {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #f8fafc;
+      }
+      body {
+        overflow: hidden;
+      }
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+      /* Custom map popup styles matching user screenshot */
+      .leaflet-popup-content-wrapper {
+        padding: 0;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0,0,0,0.06);
+      }
+      .leaflet-popup-content {
+        margin: 0;
+        line-height: 1.4;
+      }
+      .leaflet-popup-tip {
+        background: #ffffff;
+      }
+      .custom-hazard-pin {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .pulse-ring {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: rgba(239, 68, 68, 0.35);
+        animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      }
+      @keyframes pulse-ring {
+        0% { transform: scale(0.6); opacity: 0.9; }
+        50% { transform: scale(1.3); opacity: 0.3; }
+        100% { transform: scale(1.6); opacity: 0; }
+      }
+    </style>
+    <link rel="icon" href="/favicon.ico"/>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run NIRVANA.
+    </noscript>
+    <div id="root"></div>
+  </body>
+</html>
